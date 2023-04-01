@@ -1,0 +1,41 @@
+@import "../../theme/variables.scss";
+
+.myAccount {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  h1 {
+    color: #333;
+  }
+
+  span {
+    margin-top: 0.5rem;
+    color: #333;
+
+    a {
+      cursor: pointer;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+.myAccountGrid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: 2.5rem;
+    gap: 1rem;
+}
+
+@media (max-width: $mobile) {
+    .myAccountGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .myAccount{
+      justify-content: center;
+      align-items: center;
+    }
+}

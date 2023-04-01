@@ -1,0 +1,30 @@
+export interface TUser {
+  createdAt: string
+  updatedAt: string
+  id: number
+  email: string
+  name: string
+  cpf: any
+  phone: any
+  birthDate: any
+  job: any
+  income: any
+  typeResidence: any
+  freeTime: any
+  childAtHome: any
+  petAtHome: any
+  age: any
+  sex: any
+  verified: boolean
+  active: boolean
+  profilePicture: any
+  deletedAt: any
+  role: string
+  localTitle: any
+  fullAddress: any
+  description: any
+  cep: any
+  latitude: any
+  longitude: any
+  city: any
+}

@@ -1,0 +1,15 @@
+@import '../../theme/variables.scss';
+
+.home {
+    display: block;
+    margin-top: 1.5rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+@media (max-width: $mobile) {
+    .home {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }

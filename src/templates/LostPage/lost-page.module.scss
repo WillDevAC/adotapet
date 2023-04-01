@@ -1,0 +1,26 @@
+@import '../../theme/variables.scss';
+
+.Title{
+    margin-top: 1rem;
+}
+
+.Main{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 3rem;
+    grid-gap: 1rem;
+}
+
+.not {
+    margin-top: 3rem;
+}
+
+.lostBreadcrumb b {
+    cursor: pointer;
+}
+
+@media (max-width: $mobile) {
+    .Main{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

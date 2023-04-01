@@ -1,0 +1,31 @@
+.adoption__form__container {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.adoption__form__content {
+  margin-top: 1rem;
+
+  p {
+    text-align: left;
+    padding: 0.5em 0;
+  }
+}
+
+.adoption__user__agreement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  margin-top: 1.5rem;
+
+  background-color: #d9d9d9;
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+
+  p {
+    text-align: left;
+    font-size: 0.875rem;
+  }
+}

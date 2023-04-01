@@ -1,0 +1,255 @@
+@import "../../theme/variables.scss";
+
+.StepsContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-direction: column;
+}
+
+.StepsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.StepsBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+  padding: 0.5rem;
+  width: auto;
+  gap: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &#active {
+    color: #fff;
+    background-color: $brand;
+  }
+
+  &:hover {
+    color: $brand;
+    border: 1px solid $brand;
+  }
+}
+
+.StepsActions2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+
+  button:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    margin-top: 30px;
+    transition: all 0.2s;
+    border-radius: 8px;
+    background-color: slategray;
+    border-color: $brand;
+
+    &#disabled {
+      background-color: #d9d9d9;
+      color: black;
+    }
+  }
+
+  button:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    margin-top: 30px;
+    transition: all 0.2s;
+    border-radius: 8px;
+    background-color: $brand;
+    border-color: $brand;
+  }
+}
+
+.StepsActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 70%;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+
+  button:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    margin-top: 30px;
+    transition: all 0.2s;
+    border-radius: 8px;
+    background-color: slategray;
+    border-color: $brand;
+
+    &#disabled {
+      background-color: #d9d9d9;
+      color: black;
+    }
+  }
+
+  button:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    margin-top: 30px;
+    transition: all 0.2s;
+    border-radius: 8px;
+    background-color: $brand;
+    border-color: $brand;
+  }
+}
+
+.Form{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+  width: 70%;
+}
+
+.GroupThreeInputs{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.groupInput{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.groupInput input {
+  width: 100%;
+  display: block;
+  height: 40px;
+  border: 1px solid rgba(4, 4, 5, 0.1);
+  padding: 0 15px;
+  border-radius: 8px;
+  outline: none;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.select {
+  width: 100%;
+  display: block;
+  height: 40px;
+  border: 1px solid rgba(4, 4, 5, 0.1);
+  padding: 0 15px;
+  border-radius: 8px;
+  outline: none;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.GroupThreeInputs input {
+  width: 100%;
+  display: block;
+  height: 40px;
+  border: 1px solid rgba(4, 4, 5, 0.1);
+  padding: 0 15px;
+  border-radius: 8px;
+  outline: none;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  span {
+    font-size: 0.9rem;
+  }
+}
+
+.Informations{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+
+@media (max-width: $mobile) {
+  .StepsWrapper{
+    width: 100%;
+  }
+
+  .StepsActions{
+    width: 100%;
+  }
+
+  .Form {
+    width: 100%;
+  }
+
+  .GroupThreeInputs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .GroupThreeInputs input {
+    width: 100%;
+  }
+
+  .Informations{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+}

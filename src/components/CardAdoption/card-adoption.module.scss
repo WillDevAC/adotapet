@@ -1,0 +1,131 @@
+@import "../../theme/variables.scss";
+
+.MyAdoptionsCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-left: 4px solid $brand;
+  height: auto;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  position: relative;
+
+  .AdoptionsStatus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2rem;
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $brand;
+    color: white;
+    font-weight: bold;
+
+    &#submitted {
+      background-color: #f59e0b;
+    }
+
+    &#in_analysis {
+      background-color: #2e77d0;
+    }
+
+    &#accepted {
+      background-color: #10b981;
+    }
+
+    &#rejected {
+      background-color: $brand;
+    }
+  }
+}
+
+.AdoptionsDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 1.1rem;
+  width: auto;
+
+  span {
+    font-size: 0.85rem;
+    color: #8f959f;
+  }
+
+  b {
+    font-size: 0.9rem;
+    color: #404a59;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    border-right: 1px solid #e5e7eb;
+    width: 10rem;
+  }
+
+  .detailsOng {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 10rem;
+  }
+}
+
+.adoptionsActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 7%;
+
+  button:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    background-color: #d1d5db;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    padding: 0.6rem;
+    width: 8rem;
+  }
+
+  button:nth-child(2) {
+    display: flex;
+    gap: 0.3rem;
+    background-color: $brand;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.3rem;
+    padding: 0.6rem;
+    width: 8rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: $mobile) {
+  .AdoptionsDetails {
+    width: 12rem;
+  }
+
+  .adoptionsActions {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+
+  .AdoptionsDetails {
+    .details {
+      border: none;
+    }
+  }
+
+  .adoptionsOngDetails {
+    .detailsOng {
+      display: none;
+    }
+  }
+}

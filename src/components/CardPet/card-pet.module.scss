@@ -1,0 +1,107 @@
+@import "../../theme/variables.scss";
+
+.card {
+  flex-basis: calc(25% - 1rem);
+  background-color: white;
+  box-sizing: border-box;
+  height: 23rem;
+  padding: 0.5rem;
+
+  @media (max-width: $mobile) {
+    flex-basis: 100%;
+  }
+}
+
+.card__Image {
+  display: flex;
+  width: 100%;
+  height: 180px;
+  background-color: #f4f4f4;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  height: 8.5rem;
+}
+
+.card__actions {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+
+  button {
+    background-color: $brand;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+
+    &:hover {
+      background-color: #d94c5a;
+    }
+  }
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.card__port {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 10rem;
+}
+
+.card__port__bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: darkslategrey;
+  filter: blur(17px);
+}
+
+.card__port span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  color: white;
+  padding-bottom: 0.5rem;
+}

@@ -1,0 +1,64 @@
+@import '../../theme/variables.scss';
+
+.AccountNotVerified {
+  display: grid;
+  margin-top: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.NotVerifiedCard {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid rgba(4, 4, 5, 0.1);
+  width: 100%;
+  background-color: white;
+}
+
+.NotVerifiedCardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  span {
+    color: #333;
+    font-size: 0.813rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $brand;
+    font-weight: 500;
+  }
+}
+
+.NotVerifiedConfiability {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: #666;
+  gap: 1rem;
+
+  span {
+    font-size: 0.8rem;
+
+    b{
+      color: $brand;
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .AccountNotVerified {
+    grid-template-columns: 1fr;
+    margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+}

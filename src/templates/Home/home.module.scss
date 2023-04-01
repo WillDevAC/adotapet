@@ -1,0 +1,48 @@
+@import "../../theme/variables.scss";
+
+.specieList {
+  display: flex;
+  height: 5rem;
+  gap: 2rem;
+  transition: 0.2s ease-in-out;
+}
+
+.MainWrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+
+  .Filters {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    gap: 1rem;
+    top: 4.5rem;
+    height: 30rem;
+  }
+
+  .MainContent {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .MainWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .specieList {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  .specieList::-webkit-scrollbar {
+    display: none;
+  }
+}

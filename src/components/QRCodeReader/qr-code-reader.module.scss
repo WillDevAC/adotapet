@@ -1,0 +1,53 @@
+@import "../../theme/variables.scss";
+
+.qrCodeReader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(11, 8, 8, 0.905);
+
+  .closeButton {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 3%;
+    height: 5rem;
+    cursor: pointer;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+
+    span{
+        text-align: center;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .closeButton {
+      padding: 8%;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 80%;
+    }
+  }
+}

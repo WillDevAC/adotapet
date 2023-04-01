@@ -1,0 +1,66 @@
+@import '../../theme/variables.scss';
+
+.ProfileInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(4, 4, 5, 0.1);
+  background-color: white;
+  padding: 20px 30px 20px 20px;
+  border-radius: 5px;
+  height: 6rem;
+}
+
+.ProfileInfo__details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ProfileInfo__details img {
+  border-radius: 50%;
+  border: 3px solid $brand;
+}
+
+.ProfileInfo__more span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.Profile__actions button {
+  background-color: $brand;
+  border-color: $brand;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.2s all;
+  border-radius: 8px;
+  height: 40px;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.ProfileInfo__more{
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: $mobile) {
+  .ProfileInfo {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .Profile__actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

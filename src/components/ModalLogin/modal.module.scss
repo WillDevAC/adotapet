@@ -1,0 +1,207 @@
+@import '../../theme/variables.scss';
+
+#modal__container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+
+  &.one {
+    transform: scaleY(0.01) scaleX(0);
+    animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    .modal__background {
+      .modal {
+        transform: scale(0);
+        animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
+    }
+  }
+}
+.modal__background {
+  position: relative;
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
+  will-change: transform;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 9999;
+}
+
+.modal {
+  background: white;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+  z-index: 9999;
+  box-shadow: 0 20px 60px -2px rgb(27 33 58 / 40%);
+  border-radius: 3px;
+}
+
+.modal__content{
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  width: 30rem;
+  flex-direction: column;
+}
+
+.modal__close{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.modal__form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+  margin-right: 2rem;
+  gap: 1rem;
+}
+
+.modal__title{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.modal__form input {
+  display: block;
+  width: 95%;
+  height: 40px;
+  border: 1px solid rgba(4, 4, 5, 0.1);
+  padding: 0 15px;
+  border-radius: 8px;
+  outline: none;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.modal__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal__buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  width: 95%;
+  padding: 0 20px;
+  border: none;
+  margin-top: 30px;
+  transition: all 0.2s;
+  border-radius: 8px;
+  background-color: $brand;
+  border-color: $brand;
+}
+
+.modal__buttons button > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__form__group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  gap: 0.5rem;
+}
+
+.modal__footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-top: 1px solid rgba(4, 4, 5, 0.1);
+
+  span {
+    padding-top: 5%;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 500;
+  }
+}
+
+.login {
+  animation: fade-in 0.3s ease forwards;
+}
+
+.signup {
+  animation: fade-out 0.3s ease forwards;
+}
+
+@media (max-width: $mobile) {
+  .modal__content {
+    width: 22rem;
+  }
+}
+
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
